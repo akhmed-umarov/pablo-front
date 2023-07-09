@@ -1,0 +1,6 @@
+.navbar { 
+    @apply mt-7vh h-70vh bg-white w-25vw fixed top-0 right-0 z-30 flex flex-col justify-center items-center rounded-b-xl duration-500; 
+    @media (max-width: 820px) { 
+        @apply w-70vw;
+    }
+}

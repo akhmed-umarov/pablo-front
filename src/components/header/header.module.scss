@@ -1,0 +1,6 @@
+.header { 
+    @apply flex fixed top-0 left-0 h-7vh w-100vw shadow-2xl rounded-b-sm bg-header flex-row justify-between items-center px-5;
+    &_contain { 
+        @apply w-5 h-5;
+    }
+}

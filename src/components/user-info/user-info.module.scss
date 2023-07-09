@@ -1,0 +1,6 @@
+.user_block { 
+    @apply pt-9vh w-25vw border-b-2 flex justify-center items-center flex-col bg-navbar; 
+    @media (max-width: 820px) { 
+        @apply w-70vw;
+    }
+}
