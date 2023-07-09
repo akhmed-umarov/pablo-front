@@ -26,4 +26,8 @@ export const router = createBrowserRouter([
     // lazy: () => import("../pages/PostPage"),
     element: <PostPage />,
   },
+  { 
+    path: "*",
+    element: <p>Error Page</p>
+  }
 ]);
