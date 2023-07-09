@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { login, registration } from "@/store/slice/auth.slice";
 import { useNavigate } from "react-router-dom";
 import { Input, InputGroup, InputRightElement, Button } from '@chakra-ui/react'
+import AuthCheck from "@/components/auth-check/auth-check"
 
 
 export default function RegPage() {
@@ -20,12 +21,13 @@ export default function RegPage() {
 
   useEffect(() => {
     if (isAuth) {
-        navigate('/home')
+        navigate('/posts')
     }
   }, [isAuth])
 
   if (!isAuth) {
     return (
+      <AuthCheck>
       <div className="flex w-100vw h-93vh justify-center items-center bg-white">
         <div className="flex max-w-max w-1/2 flex-col">
           <div className="flex justify-center items-center">
@@ -69,10 +71,13 @@ export default function RegPage() {
           </Button>
         </div>
       </div>
+      </AuthCheck>
     );
   }
 
   return (
-    <div></div>
+    <AuthCheck>
+      <div></div>
+    </AuthCheck>
   )
 }

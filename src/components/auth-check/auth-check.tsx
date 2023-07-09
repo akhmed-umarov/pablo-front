@@ -17,7 +17,7 @@ export default function AuthCheck({
   useEffect(() => {
     if (localStorage.getItem('token')) {
       dispatch(checkAuth())
-      user.isActivated === false ? navigate('/actived') : null
+      user.isActivated === false ? navigate('/activate') : null
     } else { 
         navigate('/')
     }
