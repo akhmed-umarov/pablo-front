@@ -1,4 +1,3 @@
-'use client'
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { toggleNavbar } from '@/store/slice/modals.slice';
 import { motion } from "framer-motion"
