@@ -3,7 +3,7 @@ import RegPage from "@/pages/RegPage";
 import ActivatePage from "@/pages/ActivatePage";
 import PostPage from "@/pages/PostPage";
 import PostsPage from "@/pages/PostsPage";
-
+import ErrorPage from "@/pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +28,6 @@ export const router = createBrowserRouter([
   },
   { 
     path: "*",
-    element: <p>Error Page</p>
+    element: <ErrorPage/>
   }
 ]);
