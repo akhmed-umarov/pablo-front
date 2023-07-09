@@ -6,13 +6,14 @@ import { Header } from "@/components/header/header";
 import Navbar from "@/components/navbar/navbar";
 import { useEffect, useState } from "react";
 import { IPost } from "@/types/IPost";
+import { API_URL } from "@/http";
 
 export default function PostsPage() {
 
     const [loadingPosts, setLoadingPosts] = useState<boolean>(false)
     const [posts, setPosts] = useState<IPost[]>([])
     const selectUser = async (idUser: number | string) => {
-        fetchPosts(`http://localhost:8080/api/posts/${idUser}`)
+        fetchPosts(`${API_URL}/posts/${idUser}`)
     }
     const fetchPosts = async (url: string) => {
         setLoadingPosts(true)
@@ -27,7 +28,7 @@ export default function PostsPage() {
         }
     }
     useEffect(() => {
-        fetchPosts("http://localhost:8080/api/posts")
+        fetchPosts(`${API_URL}/posts`)
     }, [])
 
     return (

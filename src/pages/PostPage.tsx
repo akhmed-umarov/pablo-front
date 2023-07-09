@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { IPost } from '@/types/IPost';
 import { IUser } from "@/types/IUser";
+import { API_URL } from "@/http";
 
 interface IPostInfo { 
     post: IPost, 
@@ -34,7 +35,7 @@ const PostPage = () => {
     }
 
     useEffect(() => {
-        fetchPost(`http://localhost:8080/api/post/${id}`)
+        fetchPost(`${API_URL}/post/${id}`)
     }, [])
 
     return (
